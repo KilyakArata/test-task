@@ -1,0 +1,14 @@
+# путь до базы данных
+storage_path: 'internal/storage/storage.db'
+# адресс сервера
+address: ':8181'
+# таймаут
+timeout: 4s
+# общий таймаут
+idle_timeout: 30s
+# время жизни баннера в кэше
+default_expiration: 300s
+# время чистки кэша
+cleanupInterval: 600s
+# таймер на закрытие
+shutdown_timeout: 15s

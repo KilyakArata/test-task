@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8181:8181"
+    volumes:
+      - ./config.yaml:/config.yaml
+      - ./internal/storage:/internal/storage
