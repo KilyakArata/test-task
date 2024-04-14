@@ -1,0 +1,207 @@
+1) GetBanner
+получить баннер без последней версии
+{
+  "tag_id": 1,
+  "feature_id": 1,
+  "use_last_revision": false
+}
+получить баннер последней версии
+{
+  "tag_id": 1,
+  "feature_id": 1,
+  "use_last_revision": true
+}
+
+2) GetBanners
+получить все баннеры по тэгу
+{
+  "tag_id": 1,
+  "feature_id": 0,
+  "use_last_revision": false,
+  "limit": 0,
+  "offset": 0
+}
+получить все баннеры по фиче
+{
+  "tag_id": 0,
+  "feature_id": 1,
+  "use_last_revision": false,
+  "limit": 0,
+  "offset": 0
+}
+получить все баннеры по фиче и тэгу
+{
+  "tag_id": 1,
+  "feature_id": 1,
+  "use_last_revision": false,
+  "limit": 0,
+  "offset": 0
+}
+
+
+3.PostBanner
+создать баннер 1
+{
+  "tag_ids": [1, 2, 3, 4],
+  "feature_id": 1,
+  "content": {
+    "title": "Заголовок 1",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
+создать баннер 2
+{
+  "tag_ids": [3, 4],
+  "feature_id": 2,
+  "content": {
+    "title": "Заголовок 2",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
+создать баннер 3
+{
+  "tag_ids": [5, 6],
+  "feature_id": 3,
+  "content": {
+    "title": "Заголовок 3",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
+создать баннер 4
+{
+  "tag_ids": [1, 2, 3, 4],
+  "feature_id": 3,
+  "content": {
+    "title": "Заголовок 4",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": false
+}
+создать баннер 5
+{
+  "tag_ids": [3, 4],
+  "feature_id": 5,
+  "content": {
+    "title": "Заголовок 5",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": false
+}
+создать баннер 6
+{
+  "tag_ids": [6, 7],
+  "feature_id": 1,
+  "content": {
+    "title": "Заголовок 6",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": false
+}
+создать баннер 7
+{
+  "tag_ids": [6, 7],
+  "feature_id": 4,
+  "content": {
+    "title": "Заголовок 7",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
+создать баннер 8
+{
+  "tag_ids": [1, 2],
+  "feature_id": 5,
+  "content": {
+    "title": "Заголовок 8",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active":true
+}
+создать баннер 9
+{
+  "tag_ids": [6, 7],
+  "feature_id": 2,
+  "content": {
+    "title": "Заголовок 9",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": false
+}
+создать баннер 10
+{
+  "tag_ids": [5],
+  "feature_id": 1,
+  "content": {
+    "title": "Заголовок 10",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
+
+4.UpdateBanner
+обновить баннер 1
+{
+  "tag_ids": [5, 6, 7, 8],
+  "feature_id": 22,
+  "content": {
+    "title": "Заголовок 123",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": false
+}
+получить баннер 1 по фиче и тэгу
+{
+  "tag_id": 5,
+  "feature_id": 22,
+  "use_last_revision": false,
+  "limit": 0,
+  "offset": 0
+}
+вернуть обратно баннер 1
+{
+  "tag_ids": [1, 2, 3, 4],
+  "feature_id": 1,
+  "content": {
+    "title": "Заголовок",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
+
+5. DeleteBanner
+удалить баннер 1
+
+проверить баннер 1
+{
+  "tag_id": 1,
+  "feature_id": 1,
+  "use_last_revision": false,
+  "limit": 0,
+  "offset": 0
+}
+вернуть обратно баннер 1
+{
+  "tag_ids": [1, 2, 3, 4],
+  "feature_id": 1,
+  "content": {
+    "title": "Заголовок",
+    "text": "Текст статьи",
+    "url": "https://example.com/article"
+  },
+  "is_active": true
+}
